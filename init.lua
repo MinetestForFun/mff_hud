@@ -1,6 +1,6 @@
-local hotbar_size = minetest.setting_get("hotbar_size") or 16
-local health_visible = minetest.setting_getbool("hotbar_health_visible") or false
-local minimap_visible = minetest.setting_getbool("enable_minimap") or false
+local hotbar_size = minetest.settings:get("hotbar_size") or 16
+local health_visible = minetest.settings:get_bool("hotbar_health_visible") or false
+local minimap_visible = minetest.settings:get_bool("enable_minimap") or false
 
 minetest.register_on_joinplayer(function(player)
 	player:hud_set_hotbar_itemcount(hotbar_size)
